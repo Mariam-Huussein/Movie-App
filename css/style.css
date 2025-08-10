@@ -1,0 +1,193 @@
+:root {
+    --main-color:#ff2c1f;
+    --text-color:#020307;
+    --bg-color:#fff;  
+    --hoverd-btn-color:#fa1216;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+}
+
+header{
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    padding: 0.7rem 1.4rem;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    min-width: 100px;
+}
+
+.btn:hover {
+    color: var(--bg-color);
+    background: var(--hoverd-btn-color);
+}
+
+.logo-icon,
+.nav-link,
+.navbar-brand .logo-icon{
+    color: var(--main-color) !important;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: left;
+    width: 80%;
+    height: 4px;
+    background-color: var(--main-color);
+    transition: all 0.4s ease-in-out;
+}
+
+.home-link::after,
+.nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/home3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-hero-title{
+    font-size: 4rem;
+}
+
+.heading{
+    border-bottom: 1px solid var(--main-color);
+    max-width: 1000px;
+}
+
+.movies .container{
+    width: 100%;
+    max-width: unset;
+}
+
+.movies-container{
+    max-width: 1000px;
+}
+
+.card{
+    width: 180px;
+}
+
+.card-container{
+    width: fit-content;
+}
+
+.card-title {
+    font-size: 0.9rem;
+    color: var(--main-color);
+    margin-bottom: 4px;
+}
+
+.box-img {
+    width: 100%;
+    height: 270px;
+}
+
+.box-img img {
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    transition: 0.2s all linear;
+}
+
+.box-img img:hover {
+    transform:translateY(-10px);
+}
+
+.card-text{
+    font-size: 13px;
+}
+
+.email{
+    display: none;
+    width: 300px;
+    box-shadow: none !important;
+}
+
+.news input::placeholder {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.social-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 2rem;
+    line-height: 55px;
+    color: var(--main-color) !important;
+    border: 4px solid rgb(2, 3, 7, 0.4);
+    transition: 0.2s all linear;
+}
+
+.social-icon:hover{
+    background-color: var(--main-color) !important;
+    color: var(--bg-color) !important;
+}
+
+.copy span {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.navbar .active{
+    background-color: var(--bg-color);
+}
+
+@media (max-width: 1084px) {
+    .movies .container {
+        width: 100%;
+    }
+} 
+
+@media (max-width:774px) {
+.card{
+    width: 160px;
+}
+}
+
+@media (max-width:774px) {
+.card{
+    width: 160px;
+}
+}
+
+@media (max-width:380px) {
+
+.card-container {
+    width: 100%;
+}
+
+.card{
+    width: 100%;
+}
+
+.box-img img {
+    height: 240px;
+}
+
+}
+
+@media (max-width:300px) {
+.main-hero-title{
+    font-size: 1.2rem;
+}
+}
